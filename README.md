@@ -23,15 +23,42 @@
 3. **人机协作**：AI 负责起草、检查、答疑；你负责决策、修改和确认，所有关键结论由你拍板。
 4. **沉淀材料**：每阶段产出的文档都保留在仓库中，作为论文和答辩的证据链。
 
-## 毕业设计技能安装
+## 毕业设计技能
+
+### 安装技能包
 
 ```bash
+# 推荐使用 WorkBuddy 擅长写文档，界面友好操作简单，技能、专家、连接器生态丰富。
+npx @dedeguo/graduation-design-skills --tool workbuddy
+
+# trae IDE 擅长代码生成，界面友好操作简单, 插件市场有一些插件可以辅助开发
+npx @dedeguo/graduation-design-skills --tool trae
+
+# claude code 擅长代码生成
+npx @dedeguo/graduation-design-skills --tool claude
+
 # codex
 npx @dedeguo/graduation-design-skills --tool codex
 
-# trae
-npx @dedeguo/graduation-design-skills --tool trae
-
-# workbuddy
-npx @dedeguo/graduation-design-skills --tool workbuddy
 ```
+
+### 更新技能包
+
+```bash
+npx @dedeguo/graduation-design-skills@latest --tool claude
+```
+
+更新时传入安装时使用的 `--tool`。重新安装时，只会覆盖当前技能包中的同名 Skill。
+
+### 卸载技能包
+
+```bash
+npx @dedeguo/graduation-design-skills --tool codex --uninstall
+```
+
+卸载时传入安装时使用的 `--tool`。卸载器会删除以下内容。
+
+* 本技能包中包含的同名 Skill
+* 选择 TRAE 时，由本安装器生成的 Rule 文件
+
+不会删除用户自己创建的其他 Skills 和 Rules。
