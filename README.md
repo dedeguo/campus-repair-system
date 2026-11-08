@@ -1,8 +1,10 @@
 # 校园报修系统（Campus Repair System）
 
-这是一个**示例项目**，演示如何借助 AI 编程工具与「毕业设计技能包」辅助完成一篇完整的计算机类本科毕业设计。
+这是一个**示例项目**，演示如何借助 AI 编程工具与「毕业设计技能包」，辅助完成一篇完整的计算机类本科毕业设计。
 
-示例以校园报修系统为载体，覆盖从选题到答辩的全流程，展示每个阶段该用哪个技能、如何与 AI 协作、产出什么材料。
+示例以校园报修系统为载体，覆盖从选题到答辩的全流程，展示每个阶段该用哪个技能、如何与 AI 协作、产出哪些材料。
+
+在 AI 工具的选择上，推荐在 Windows 系统下使用 WorkBuddy，它的文档写作效果出众；系统开发、编码与测试同样可以用 WorkBuddy 完成，也可选择 Trae IDE、Claude Code、Codex 等其他 AI 编程工具。
 
 ## 全流程与技能对照
 
@@ -18,26 +20,27 @@
 
 ## 推荐工作流
 
-1. **安装技能**：在项目中执行下方安装命令，为你的 AI 工具装配技能包。
-2. **按阶段推进**：进入每个阶段时，直接告诉 AI 你要做的事（如"帮我根据任务书写开题报告"），对应技能会被自动调用。
-3. **人机协作**：AI 负责起草、检查、答疑；你负责决策、修改和确认，所有关键结论由你拍板。
-4. **沉淀材料**：每阶段产出的文档都保留在仓库中，作为论文和答辩的证据链。
+1. **安装技能**：在项目中执行下方安装命令，为 AI 工具装配技能包。
+2. **按阶段推进**：进入某一阶段时，直接用自然语言说明你的目标（例如"帮我根据任务书写开题报告"），对应的技能便会被自动调用。
+3. **人机协作**：AI 负责起草、检查与答疑，你负责判断、修改与确认，关键结论由你把关。
+4. **沉淀材料**：每个阶段的产出都保留在仓库中，形成支撑论文与答辩的完整证据链。
 
 ## 毕业设计技能
 
 ### 安装技能包
 
 ```bash
-# 推荐使用 WorkBuddy 擅长写文档，界面友好操作简单，技能、专家、连接器生态丰富。
+# WorkBuddy：文档写作是强项，界面友好、操作简单，技能、专家与连接器生态丰富
+# 在 Windows 系统下，文档生成效果更佳
 npx @dedeguo/graduation-design-skills --tool workbuddy
 
-# trae IDE 擅长代码生成，界面友好操作简单, 插件市场有一些插件可以辅助开发
+# Trae IDE：擅长代码生成，界面简洁易用，插件市场另有插件可辅助开发
 npx @dedeguo/graduation-design-skills --tool trae
 
-# claude code 擅长代码生成
+# Claude Code：擅长代码生成
 npx @dedeguo/graduation-design-skills --tool claude
 
-# codex
+# Codex
 npx @dedeguo/graduation-design-skills --tool codex
 
 ```
@@ -48,7 +51,7 @@ npx @dedeguo/graduation-design-skills --tool codex
 npx @dedeguo/graduation-design-skills@latest --tool claude
 ```
 
-更新时传入安装时使用的 `--tool`。重新安装时，只会覆盖当前技能包中的同名 Skill。
+更新时请传入安装时所用的 `--tool`。重新安装只会覆盖本技能包中的同名 Skill，不会影响其他内容。
 
 ### 卸载技能包
 
@@ -56,9 +59,9 @@ npx @dedeguo/graduation-design-skills@latest --tool claude
 npx @dedeguo/graduation-design-skills --tool codex --uninstall
 ```
 
-卸载时传入安装时使用的 `--tool`。卸载器会删除以下内容。
+卸载时同样需要传入安装时所用的 `--tool`。卸载器会删除以下内容：
 
-* 本技能包中包含的同名 Skill
-* 选择 TRAE 时，由本安装器生成的 Rule 文件
+* 本技能包所包含的同名 Skill
+* 若选择 TRAE，还会删除由本安装器生成的 Rule 文件
 
-不会删除用户自己创建的其他 Skills 和 Rules。
+你自己创建的其他 Skills 与 Rules 不会被删除。
